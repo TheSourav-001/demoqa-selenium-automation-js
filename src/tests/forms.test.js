@@ -39,10 +39,8 @@ describe('DemoQA Practice Form Automation', function () {
 
         await formsPage.enterText(formsPage.cityInput, "Delhi");
         await (await formsPage.find(formsPage.cityInput)).sendKeys(Key.ENTER);
-        await driver.sleep(1000);
 
         await formsPage.submitForm();
-        await driver.sleep(2000);
 
         const successMsg = await formsPage.find(formsPage.submissionModalTitle);
         const msgText = await successMsg.getText();
